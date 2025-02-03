@@ -1,0 +1,68 @@
+<html>
+<head>
+<title> Registration Form </title>
+</head>
+<h1><center>Registration Form</center></h1>
+<body bgcolor=#e6f3ff>
+
+<b><b><label>Email Address</label>
+<input type="email" id="username">
+<br><br>
+
+<b><label>Password</label>
+<input type="password" id="password" name="password">
+<br> <br>
+<b><label>Confirm Password</label>
+<input type="password" name="Confirm Password">
+<br> <br> <br>
+
+<label>Name</label>
+<input type="text">
+
+<br> <br> <br>
+
+<label>Gender</label> </b>
+
+<br> 
+
+<input type="radio" name="gender" value="male"> Male
+<input type="radio" name="gender" value="female"> Female
+
+<br> <br> <br>
+
+<b> DOB <b> <input type="date" name="DOB" value="DOB">
+
+<br> <br> <br>
+
+<label>Year</label>
+<select name="Year" id="Year">
+<option value ="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</opton>
+</select>
+
+<br> <br> <br>
+
+<label>College</label>
+<input type="text">
+
+<br>
+<br>
+<br>
+
+<button onclick="savedata()">Submit</button>
+<script> function savedata(){alert("Successfully submitted"); }</script>
+
+<script>
+function savedata()
+{
+let username = document.getElementById("username").value;
+let password = document.getElementById("password").value;
+
+localStorage.setItem("username", username);
+localStorage.setItem("password", password);
+
+alert(localStorage.getItem("username"));
+alert(localStorage.getItem("password"));}
+</script>
